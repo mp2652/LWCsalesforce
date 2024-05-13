@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Step 2: Contact Information">
+        <div class="slds-m-around_medium">
+            <lightning-combobox label="Country" value={country} options={countryOptions} onchange={handleCountryChange}></lightning-combobox>
+            <lightning-input label="Phone Number" value={phoneNumber} onchange={handlePhoneNumberChange} pattern="[0-9]{10,15}" title="Please enter a valid 10 to 15 digit phone number"></lightning-input>
+            <div if:true={phoneError} style="color: #be041d ;font-size: 12px;">
+                Invalid phone number. Please enter a valid 10 to 15 digit phone number.
+            </div>
+        </div>
+    </lightning-card>
+</template>

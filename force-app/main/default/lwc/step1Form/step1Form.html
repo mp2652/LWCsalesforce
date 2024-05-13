@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Step 1: Personal Information">
+        <div class="slds-m-around_medium">
+            <lightning-input label="First Name" value={firstName} onchange={handleFirstNameChange} required></lightning-input>
+            <lightning-input label="Last Name" value={lastName} onchange={handleLastNameChange} required></lightning-input>
+            <lightning-input type="date" label="Date of Birth" value={dateOfBirth} onchange={handleDateOfBirthChange} required></lightning-input>
+            <div if:true={isInvalid} style="color: #be041d; font-size: 12px;">
+                {errorMessages}
+            </div>
+        </div>
+    </lightning-card>
+</template>
