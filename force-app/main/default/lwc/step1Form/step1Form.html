@@ -1,11 +1,25 @@
 <template>
-    <lightning-card title="Step 1: Personal Information">
-        <div class="slds-m-around_medium">
-            <lightning-input label="First Name" value={firstName} onchange={handleFirstNameChange} required></lightning-input>
-            <lightning-input label="Last Name" value={lastName} onchange={handleLastNameChange} required></lightning-input>
-            <lightning-input type="date" label="Date of Birth" value={dateOfBirth} onchange={handleDateOfBirthChange} required></lightning-input>
-            <div if:true={isInvalid} style="color: #be041d; font-size: 12px;">
-                {errorMessages}
+    <lightning-card title="Step 1: Personal Information" class="slds-m-around_medium">
+        <div class="slds-form slds-form_stacked">
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <lightning-input type="text" label="First Name" value={firstName} onchange={handleFirstNameChange} class="slds-input" required></lightning-input>
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <lightning-input type="text" label="Last Name" value={lastName} onchange={handleLastNameChange} class="slds-input" required></lightning-input>
+                </div>
+            </div>
+            <div class="slds-form-element">
+                <div class="slds-form-element__control">
+                    <lightning-input type="date" label="Date of Birth" value={dateOfBirth} onchange={handleDateOfBirthChange} class="slds-input" required></lightning-input>
+                </div>
+            </div>
+            <div class="slds-m-top_medium">
+                <div if:true={isInvalid} class="slds-text-color_error slds-text-body_small">
+                    {errorMessages}
+                </div>
             </div>
         </div>
     </lightning-card>
