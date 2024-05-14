@@ -3,7 +3,7 @@ import { LightningElement, api } from 'lwc';
 export default class Step2Form extends LightningElement {
     @api country;
     @api phoneNumber;
-    phoneError = false;
+    @api phoneError = false;
 
     countryOptions = [
         { label: 'USA', value: 'USA' },

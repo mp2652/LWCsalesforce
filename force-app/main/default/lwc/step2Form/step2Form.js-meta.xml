@@ -12,6 +12,7 @@
         <targetConfig targets="lightning__FlowScreen">
             <property name="country" type="String" label="Country" />
             <property name="phoneNumber" type="String" label="Phone Number" />
+            <property type="boolean" name="phoneError"  label="Phone Error" />
         </targetConfig>
     </targetConfigs>
 </LightningComponentBundle>
